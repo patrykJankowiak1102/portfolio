@@ -40,7 +40,7 @@
             </ul>
         </div>
         <div class="sourceCode">
-            <a href="https://github.com/patrykJankowiak1102/patrykJankowiak1102.github.io" target="_blank"><img src="img/github_logo.png" alt="github logo"></a>
+            <a href="https://github.com/patrykJankowiak1102/portfolio" target="_blank"><img src="img/github_logo.png" alt="github logo"></a>
         </div>
     </header>
     <main>
@@ -111,7 +111,7 @@
                     </div>
                 <input type="hidden" name="submit_frm" value="1">
                 <button class="g-recaptcha" 
-                    data-sitekey="6LfsOAwqAAAAAO1s7GQp_uXWtrnSda0e205APi2d" 
+                    data-sitekey="6LdQzZwqAAAAAP9RalVKpbZo95JCQ1bwTBBhHfcO" 
                     data-callback='onSubmit' 
                     data-action='submit'>Wyślij</button>
                 <script>
