@@ -28,6 +28,8 @@ $shooting-time: 3000ms;
 
 *{
     font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
 }
 html{
     scrollbar-color: $color-font $color-dark;
@@ -40,37 +42,25 @@ html{
         overflow-x: hidden;
         position: relative;
         z-index: 0;
-
-        #rework{
-            color: rgb(255, 50, 50);
-            text-align: center;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            margin: 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
-            z-index: 1000;
-            // height: 10px;
-        }
     
         header{
             display: flex;
-            padding: 30px;
+            margin-top: 3vh;
             justify-content: center;
 
             .menucontainer{
                 transform: translateX(-10px);
                 transition: all 0.3s linear;
                 background-color: rgba($color-background, 0.9);
-                height: 6vh;
-                width: 28vw;
+                height: calc(1.1vw * 3);
+                // width: 28vw;
                 position: absolute;
-                border-radius: 15px;
+                border-radius: 1vw;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                padding-left: 2.5vw;
+                padding-right: 2.5vw;
             
                 ul{
                     display: flex;
@@ -81,6 +71,10 @@ html{
                     margin: 0;
                     padding: 0;
                     gap: 3vw;
+
+                    .sourceCodeMobile{
+                        display: none;
+                    }
             
                     a{
                         position: relative;
@@ -88,6 +82,7 @@ html{
                         font-size: 1.1vw;
                         color: $color-bright;
                         text-decoration: none;
+                        margin-top: -0.2vh;
             
                         &::after{
                             position: absolute;
@@ -95,7 +90,7 @@ html{
                             top: 100%;
                             left: 0;
                             width: 100%;
-                            height: 3px;
+                            height: 0.4vh;
                             background: $color-bright;
                             transform: scaleX(0);
                             transform-origin: right;
@@ -129,12 +124,13 @@ html{
             }
         }
         main{
-            height: 70vh;
+            height: 100vh;
             position: relative;
             z-index: -1;
+            overflow: hidden;
 
             .night{
-                position: relative;
+                position: absolute;
                 width: 250%;
                 height: 250%;
                 left: -25%;
@@ -201,7 +197,7 @@ html{
             }
 
             .name{
-                margin-top: 28vh;
+                margin-top: 32vh;
                 display: grid;
 
                 h1{
@@ -322,17 +318,20 @@ html{
         }
         #kontakt{
             width: 100%;
-            height: 55vh;
+            // height: 55vh;
+            height: auto;
             font-size: 1.2vw;
             align-items: center;
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 2vw;
 
             .kontakt_box{
                 width: 95vw;
-                height: 50vh;
+                // height: 50vh;
+                // margin-bottom: 2vw;
                 background: rgb(0, 0, 0, 0.5);
                 box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
                 position: relative;
@@ -381,6 +380,7 @@ html{
                         color: $color-bright;
                         font-size: 0.9vw;
                         width: 100%;
+                        margin-bottom: 3vw;
                     }
                     button:hover{
                         cursor: pointer;
@@ -418,7 +418,7 @@ html{
         }
         #projekty{
             width: 100%;
-            height: 70vh;
+            // height: 70vh;
             padding-bottom: 3vh;
             display: flex;
             flex-wrap: wrap;
@@ -426,7 +426,8 @@ html{
         
             .projekty_box{
                 width: 85vw;
-                height: 70vh;
+                // height: 70vh;
+                // height: auto;
                 background: rgb(0, 0, 0, 0.5);
                 box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
                 position: relative;
@@ -463,6 +464,7 @@ html{
                 color: $color-bright;
                 font-size: 2vw;
                 font-weight: bold;
+                margin: 1vw;
             }
         }
         
@@ -591,277 +593,380 @@ html{
     }
 }
 
-@media screen and (max-width: 1550px){  
+@media screen and (max-width: 1200px){  
     body{
+        header{
+            margin-top: 0 !important;
+
+            .menucontainer{
+                width: 100vw !important;
+                border-radius: 0 !important;
+                height: calc(3vw * 3) !important;
+                padding: 0 !important;
+
+                ul{
+                    gap: 10vw !important;
+
+                    .sourceCodeMobile{
+                        display: flex !important;
+                        align-items: center;
+                        position: absolute;
+                        right: 2vw;
+                        margin-top: 0.5vw;
+
+                        a{
+                            color: $color-font;
+                            text-decoration: none;
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            img{
+                                width: 6vw;
+                            }
+                        }
+                    }
+                    
+                    a{
+                        font-size: 3vw !important;
+                    }
+                }
+            }
+            .sourceCode{
+                display: none !important;
+            }
+            
+        }
         main{
-            h1{
-                word-spacing: 100vw;
-                margin-top: -50px;
+            .name{
+                h1{
+                    font-size: 10vw !important;
+                }
+                h2{
+                    font-size: 5vw !important;
+                }
             }
         }
-        #projekty{
-            height: 100vh !important;
-            padding-bottom: 50vh !important;
+        #kontakt{
+            .kontakt_box{
+                height: fit-content !important;
+                margin-bottom: 0.5vw !important;
+            }
+            h3{
+                font-size: 5vw !important;
+            }  
             p{
                 font-size: 3vw !important;
             }
-        }
-    }
-}
-@media screen and (max-width: 855px){ 
-    body{
-        main{
-            h1{
-                font-size: 80px !important;
-                margin-top: -50px;
-            }
-            h2{
-                font-size: 40px !important;
-            }
-            .languages{
-                img{
-                    width: 50px !important;
-                    margin-left: 15px !important;
-                }
-                #imgRounded{
-                    border-radius: 4px !important;
-                }
-            }
-        }
-        #projekty{
-            display: flex;
-            flex-wrap: wrap;
-            
-            div{
-                width: 40% !important;
-                text-align: center;
-                height: 0 !important;
+            form{
+                width: 90vw !important;
 
+                button{
+                    height: calc(90vw * 0.07) !important;
+                    margin-bottom: 2.5vw !important;
+                }
                 p{
-                    font-size: 3vw !important;
+
+                }
+                div{
+                    
+                    input{
+                        height: calc(90vw * 0.05) !important;
+                        margin-bottom: 1.5vw !important;
+                    }
+                    textarea{
+                        height: calc(90vw * 0.15) !important;
+                        margin-bottom: 1.5vw !important;
+                    }
+                }
+                button, input, textarea{
+                    font-size: 2vw !important;
                 }
             }
         }
-    }
-}
-@media screen and (max-width: 620px){
-    body{
-        header{
-            padding: 0 !important;
-            margin: 0 !important;
-            height: 60px !important;
-            width: 100vw !important;
-            display: flex;
-            justify-content: right;
 
-            input{
-                display: none;
-            }
-            input:not(:checked) ~ .menucontainer{
-                opacity: 1;
-            }
-            .menu{
-                display: none;
-                
-            }
-            .menucontainer{
-                width: 100vw !important;
-                height: 80px !important;
-                border-radius: 0 !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                transition: none !important;
-                transform: none !important;
-                
-
-                ul{
-                    display: flex !important;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    padding: 0 !important;
-                    margin: 0 !important;
-                    margin-top: 25px !important;
-
-                    div{
-                        height: 100%;
-                        a{
-                            padding: 0 !important;
-                            margin: 0 !important;
-                        } 
+        #projekty {
+            // margin-top: 3vw !important;
+        
+            .projekty_box {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center;
+                padding-bottom: 4vw !important;
+        
+                div {
+                    text-align: center !important;
+                    width: 100% !important;
+        
+                    img {
+                        width: 100% !important;
+                        // margin-bottom: 5vw !important; /* Adds space below each image */
+                    }
+        
+                    p {
+                        font-size: 5vw !important;
+                        margin: 2vw 0 !important; /* Adds space above and below text */
                     }
                 }
             }
         }
-        main{
-            h1{
-                font-size: 50px !important;
-                margin-top: -50px;
-                letter-spacing: 10px !important;
-            }
-            h2{
-                font-size: 20px !important;
-                margin-left: 42px !important;
-            }
-            .languages{
-                img{
-                    width: 20px !important;
-                    margin-left: 8px !important;
-                }
-                #imgRounded{
-                    border-radius: 2px !important;
-                }
-            }
-        }
-        #projekty{
-                height: 80vh !important;
-                padding-bottom: 20vh !important;
-        }
-        #kontakt{
-            font-size: 20px !important;
-            form{
-                width: 430px !important;
-            }
-        }
+        
     }
 }
-@media screen and (max-width: 450px){
+// @media screen and (max-width: 855px){ 
+//     body{
+//         main{
+//             h1{
+//                 font-size: 80px !important;
+//                 margin-top: -50px;
+//             }
+//             h2{
+//                 font-size: 40px !important;
+//             }
+//             .languages{
+//                 img{
+//                     width: 50px !important;
+//                     margin-left: 15px !important;
+//                 }
+//                 #imgRounded{
+//                     border-radius: 4px !important;
+//                 }
+//             }
+//         }
+//         #projekty{
+//             display: flex;
+//             flex-wrap: wrap;
+            
+//             div{
+//                 width: 40% !important;
+//                 text-align: center;
+//                 height: 0 !important;
+
+//                 p{
+//                     font-size: 3vw !important;
+//                 }
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 620px){
+//     body{
+//         header{
+//             padding: 0 !important;
+//             margin: 0 !important;
+//             height: 60px !important;
+//             width: 100vw !important;
+//             display: flex;
+//             justify-content: right;
+
+//             input{
+//                 display: none;
+//             }
+//             input:not(:checked) ~ .menucontainer{
+//                 opacity: 1;
+//             }
+//             .menu{
+//                 display: none;
+                
+//             }
+//             .menucontainer{
+//                 width: 100vw !important;
+//                 height: 80px !important;
+//                 border-radius: 0 !important;
+//                 padding: 0 !important;
+//                 margin: 0 !important;
+//                 transition: none !important;
+//                 transform: none !important;
+                
+
+//                 ul{
+//                     display: flex !important;
+//                     justify-content: space-evenly;
+//                     align-items: center;
+//                     padding: 0 !important;
+//                     margin: 0 !important;
+//                     margin-top: 25px !important;
+
+//                     div{
+//                         height: 100%;
+//                         a{
+//                             padding: 0 !important;
+//                             margin: 0 !important;
+//                         } 
+//                     }
+//                 }
+//             }
+//         }
+//         main{
+//             h1{
+//                 font-size: 50px !important;
+//                 margin-top: -50px;
+//                 letter-spacing: 10px !important;
+//             }
+//             h2{
+//                 font-size: 20px !important;
+//                 margin-left: 42px !important;
+//             }
+//             .languages{
+//                 img{
+//                     width: 20px !important;
+//                     margin-left: 8px !important;
+//                 }
+//                 #imgRounded{
+//                     border-radius: 2px !important;
+//                 }
+//             }
+//         }
+//         #projekty{
+//                 height: 80vh !important;
+//                 padding-bottom: 20vh !important;
+//         }
+//         #kontakt{
+//             font-size: 20px !important;
+//             form{
+//                 width: 430px !important;
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 450px){
     
-    body{
-        header{
-            padding: 0 !important;
-            margin: 0 !important;
-            height: 60px !important;
-            width: 100vw !important;
-            display: flex;
-            justify-content: right;
+//     body{
+//         header{
+//             padding: 0 !important;
+//             margin: 0 !important;
+//             height: 60px !important;
+//             width: 100vw !important;
+//             display: flex;
+//             justify-content: right;
             
 
-            input{
-                display: none;
-            }
-            input:not(:checked) ~ .menucontainer{
-                opacity: 1;
-            }
-            .menu{
-                display: none;
+//             input{
+//                 display: none;
+//             }
+//             input:not(:checked) ~ .menucontainer{
+//                 opacity: 1;
+//             }
+//             .menu{
+//                 display: none;
                 
-            }
-            .menucontainer{
-                width: 100vw !important;
-                height: 70px !important;
-                border-radius: 0 !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                transition: none !important;
-                transform: none !important;
+//             }
+//             .menucontainer{
+//                 width: 100vw !important;
+//                 height: 70px !important;
+//                 border-radius: 0 !important;
+//                 padding: 0 !important;
+//                 margin: 0 !important;
+//                 transition: none !important;
+//                 transform: none !important;
                 
 
-                ul{
-                    display: flex !important;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    padding: 0 !important;
-                    margin: 0 !important;
-                    margin-top: 25px !important;
+//                 ul{
+//                     display: flex !important;
+//                     justify-content: space-evenly;
+//                     align-items: center;
+//                     padding: 0 !important;
+//                     margin: 0 !important;
+//                     margin-top: 25px !important;
 
-                    div{
-                        height: 100%;
-                        a{
-                            padding: 0 !important;
-                            margin: 0 !important;
-                            font-size: 15px !important;
-                        } 
-                    }
-                }
-            }
-        }
-        main{
-            h1{
-                font-size: 35px !important;
-                margin-top: -50px;
-                letter-spacing: 10px !important;
-            }
-            h2{
-                font-size: 20px !important;
-                margin-left: 42px !important;
-            }
-        }
-        #projekty{
-            height: 60vh !important;
-            padding-bottom: 20vh !important;
-        }
-        #kontakt{
-            font-size: 15px !important;
-            form{
-                width: 300px !important;
-            }
-        }
-    }
-}
-@media screen and (max-width: 320px){
+//                     div{
+//                         height: 100%;
+//                         a{
+//                             padding: 0 !important;
+//                             margin: 0 !important;
+//                             font-size: 15px !important;
+//                         } 
+//                     }
+//                 }
+//             }
+//         }
+//         main{
+//             h1{
+//                 font-size: 35px !important;
+//                 margin-top: -50px;
+//                 letter-spacing: 10px !important;
+//             }
+//             h2{
+//                 font-size: 20px !important;
+//                 margin-left: 42px !important;
+//             }
+//         }
+//         #projekty{
+//             height: 60vh !important;
+//             padding-bottom: 20vh !important;
+//         }
+//         #kontakt{
+//             font-size: 15px !important;
+//             form{
+//                 width: 300px !important;
+//             }
+//         }
+//     }
+// }
+// @media screen and (max-width: 320px){
     
-    body{
-        header{
-            padding: 0 !important; margin: 0 !important;
-            height: 20vh !important;
-            width: 100vw !important;
-            display: flex;
-            justify-content: right;
+//     body{
+//         header{
+//             padding: 0 !important; margin: 0 !important;
+//             height: 20vh !important;
+//             width: 100vw !important;
+//             display: flex;
+//             justify-content: right;
             
 
-            input{
-                display: none;
-            }
-            input:not(:checked) ~ .menucontainer{
-                opacity: 1;
-            }
-            .menu{
-                display: none;
+//             input{
+//                 display: none;
+//             }
+//             input:not(:checked) ~ .menucontainer{
+//                 opacity: 1;
+//             }
+//             .menu{
+//                 display: none;
                 
-            }
-            .menucontainer{
-                padding: 0 !important; margin: 0 !important;
-                width: 100vw !important;
-                height: 20vw !important;
-                border-radius: 0 !important;
-                transition: none !important;
-                transform: none !important;
+//             }
+//             .menucontainer{
+//                 padding: 0 !important; margin: 0 !important;
+//                 width: 100vw !important;
+//                 height: 20vw !important;
+//                 border-radius: 0 !important;
+//                 transition: none !important;
+//                 transform: none !important;
                 
-                ul{
-                    padding: 0 !important; margin: 0 !important;
-                    display: flex !important;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    margin-top: 7vw !important;
+//                 ul{
+//                     padding: 0 !important; margin: 0 !important;
+//                     display: flex !important;
+//                     justify-content: space-evenly;
+//                     align-items: center;
+//                     margin-top: 7vw !important;
 
-                    div{
-                        height: 100%;
+//                     div{
+//                         height: 100%;
 
-                        a{
-                            padding: 0 !important; margin: 0 !important;
-                            font-size: 5vw !important;
-                        } 
-                    }
-                }
-            }
-        }
-        main{
-            h1{
-                font-size: 10vw !important;
-                letter-spacing: 3vw !important;
-                margin-left: 10vw !important;
-            }
-            h2{
-                font-size: 5vw !important;
-                margin-left: 10vw !important;
-            }
-        }
-        #projekty{
-            height: 35vh !important;
-            padding-bottom: 15vh !important;
-        }
-    }
-}
+//                         a{
+//                             padding: 0 !important; margin: 0 !important;
+//                             font-size: 5vw !important;
+//                         } 
+//                     }
+//                 }
+//             }
+//         }
+//         main{
+//             h1{
+//                 font-size: 10vw !important;
+//                 letter-spacing: 3vw !important;
+//                 margin-left: 10vw !important;
+//             }
+//             h2{
+//                 font-size: 5vw !important;
+//                 margin-left: 10vw !important;
+//             }
+//         }
+//         #projekty{
+//             height: 35vh !important;
+//             padding-bottom: 15vh !important;
+//         }
+//     }
+// }
 
 
 @keyframes topOnload{

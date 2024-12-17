@@ -24,6 +24,8 @@
 
 * {
   font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -39,34 +41,23 @@ html body {
   position: relative;
   z-index: 0;
 }
-html body #rework {
-  color: rgb(255, 50, 50);
-  text-align: center;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 1000;
-}
 html body header {
   display: flex;
-  padding: 30px;
+  margin-top: 3vh;
   justify-content: center;
 }
 html body header .menucontainer {
   transform: translateX(-10px);
   transition: all 0.3s linear;
   background-color: rgba(27, 39, 53, 0.9);
-  height: 6vh;
-  width: 28vw;
+  height: 3.3vw;
   position: absolute;
-  border-radius: 15px;
+  border-radius: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
 }
 html body header .menucontainer ul {
   display: flex;
@@ -78,12 +69,16 @@ html body header .menucontainer ul {
   padding: 0;
   gap: 3vw;
 }
+html body header .menucontainer ul .sourceCodeMobile {
+  display: none;
+}
 html body header .menucontainer ul a {
   position: relative;
   display: block;
   font-size: 1.1vw;
   color: #cfdbe8;
   text-decoration: none;
+  margin-top: -0.2vh;
 }
 html body header .menucontainer ul a::after {
   position: absolute;
@@ -91,7 +86,7 @@ html body header .menucontainer ul a::after {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 0.4vh;
   background: #cfdbe8;
   transform: scaleX(0);
   transform-origin: right;
@@ -118,12 +113,13 @@ html body header .sourceCode a img {
   width: 60px;
 }
 html body main {
-  height: 70vh;
+  height: 100vh;
   position: relative;
   z-index: -1;
+  overflow: hidden;
 }
 html body main .night {
-  position: relative;
+  position: absolute;
   width: 250%;
   height: 250%;
   left: -25%;
@@ -166,187 +162,187 @@ html body main .night .shooting_star::after {
   transform: translateX(50%) rotateZ(-45deg);
 }
 html body main .night .shooting_star:nth-child(1) {
-  top: calc(100% - 158vh);
-  left: calc(0% + 55vw);
-  animation-delay: 2864ms;
-  opacity: 0.64;
+  top: calc(100% - 133vh);
+  left: calc(0% + 80vw);
+  animation-delay: 6723ms;
+  opacity: 0.78;
 }
 html body main .night .shooting_star:nth-child(1)::before, html body main .night .shooting_star:nth-child(1)::after {
-  animation-delay: 2864ms;
+  animation-delay: 6723ms;
 }
 html body main .night .shooting_star:nth-child(2) {
-  top: calc(100% - 20vh);
-  left: calc(0% + 49vw);
-  animation-delay: 1825ms;
-  opacity: 0.65;
+  top: calc(100% - 200vh);
+  left: calc(0% + 65vw);
+  animation-delay: 7940ms;
+  opacity: 0.81;
 }
 html body main .night .shooting_star:nth-child(2)::before, html body main .night .shooting_star:nth-child(2)::after {
-  animation-delay: 1825ms;
+  animation-delay: 7940ms;
 }
 html body main .night .shooting_star:nth-child(3) {
-  top: calc(100% - 226vh);
-  left: calc(0% + 61vw);
-  animation-delay: 5438ms;
-  opacity: 0.92;
+  top: calc(100% - 48vh);
+  left: calc(0% + 5vw);
+  animation-delay: 7649ms;
+  opacity: 0.74;
 }
 html body main .night .shooting_star:nth-child(3)::before, html body main .night .shooting_star:nth-child(3)::after {
-  animation-delay: 5438ms;
+  animation-delay: 7649ms;
 }
 html body main .night .shooting_star:nth-child(4) {
-  top: calc(100% - 236vh);
-  left: calc(0% + 57vw);
-  animation-delay: 5469ms;
-  opacity: 0.96;
+  top: calc(100% - 226vh);
+  left: calc(0% + 61vw);
+  animation-delay: 9056ms;
+  opacity: 0.73;
 }
 html body main .night .shooting_star:nth-child(4)::before, html body main .night .shooting_star:nth-child(4)::after {
-  animation-delay: 5469ms;
+  animation-delay: 9056ms;
 }
 html body main .night .shooting_star:nth-child(5) {
-  top: calc(100% - 172vh);
-  left: calc(0% + 64vw);
-  animation-delay: 7021ms;
-  opacity: 0.68;
-}
-html body main .night .shooting_star:nth-child(5)::before, html body main .night .shooting_star:nth-child(5)::after {
-  animation-delay: 7021ms;
-}
-html body main .night .shooting_star:nth-child(6) {
-  top: calc(100% - 31vh);
-  left: calc(0% + 64vw);
-  animation-delay: 2103ms;
-  opacity: 0.98;
-}
-html body main .night .shooting_star:nth-child(6)::before, html body main .night .shooting_star:nth-child(6)::after {
-  animation-delay: 2103ms;
-}
-html body main .night .shooting_star:nth-child(7) {
-  top: calc(100% - 237vh);
-  left: calc(0% + 8vw);
-  animation-delay: 10276ms;
-  opacity: 0.61;
-}
-html body main .night .shooting_star:nth-child(7)::before, html body main .night .shooting_star:nth-child(7)::after {
-  animation-delay: 10276ms;
-}
-html body main .night .shooting_star:nth-child(8) {
-  top: calc(100% - 27vh);
-  left: calc(0% + 77vw);
-  animation-delay: 7437ms;
+  top: calc(100% - 140vh);
+  left: calc(0% + 71vw);
+  animation-delay: 1686ms;
   opacity: 0.75;
 }
+html body main .night .shooting_star:nth-child(5)::before, html body main .night .shooting_star:nth-child(5)::after {
+  animation-delay: 1686ms;
+}
+html body main .night .shooting_star:nth-child(6) {
+  top: calc(100% - 184vh);
+  left: calc(0% + 25vw);
+  animation-delay: 1361ms;
+  opacity: 0.72;
+}
+html body main .night .shooting_star:nth-child(6)::before, html body main .night .shooting_star:nth-child(6)::after {
+  animation-delay: 1361ms;
+}
+html body main .night .shooting_star:nth-child(7) {
+  top: calc(100% - 13vh);
+  left: calc(0% + 57vw);
+  animation-delay: 9194ms;
+  opacity: 0.76;
+}
+html body main .night .shooting_star:nth-child(7)::before, html body main .night .shooting_star:nth-child(7)::after {
+  animation-delay: 9194ms;
+}
+html body main .night .shooting_star:nth-child(8) {
+  top: calc(100% - 212vh);
+  left: calc(0% + 2vw);
+  animation-delay: 3485ms;
+  opacity: 0.98;
+}
 html body main .night .shooting_star:nth-child(8)::before, html body main .night .shooting_star:nth-child(8)::after {
-  animation-delay: 7437ms;
+  animation-delay: 3485ms;
 }
 html body main .night .shooting_star:nth-child(9) {
-  top: calc(100% - 192vh);
-  left: calc(0% + 64vw);
-  animation-delay: 10115ms;
-  opacity: 0.86;
+  top: calc(100% - 34vh);
+  left: calc(0% + 58vw);
+  animation-delay: 2935ms;
+  opacity: 0.85;
 }
 html body main .night .shooting_star:nth-child(9)::before, html body main .night .shooting_star:nth-child(9)::after {
-  animation-delay: 10115ms;
+  animation-delay: 2935ms;
 }
 html body main .night .shooting_star:nth-child(10) {
-  top: calc(100% - 107vh);
-  left: calc(0% + 12vw);
-  animation-delay: 2396ms;
-  opacity: 0.64;
+  top: calc(100% - 219vh);
+  left: calc(0% + 69vw);
+  animation-delay: 9864ms;
+  opacity: 0.76;
 }
 html body main .night .shooting_star:nth-child(10)::before, html body main .night .shooting_star:nth-child(10)::after {
-  animation-delay: 2396ms;
+  animation-delay: 9864ms;
 }
 html body main .night .shooting_star:nth-child(11) {
-  top: calc(100% - 188vh);
-  left: calc(0% + 44vw);
-  animation-delay: 1497ms;
-  opacity: 0.88;
+  top: calc(100% - 33vh);
+  left: calc(0% + 46vw);
+  animation-delay: 4235ms;
+  opacity: 0.66;
 }
 html body main .night .shooting_star:nth-child(11)::before, html body main .night .shooting_star:nth-child(11)::after {
-  animation-delay: 1497ms;
+  animation-delay: 4235ms;
 }
 html body main .night .shooting_star:nth-child(12) {
-  top: calc(100% - 157vh);
-  left: calc(0% + 32vw);
-  animation-delay: 7028ms;
-  opacity: 0.69;
+  top: calc(100% - 233vh);
+  left: calc(0% + 39vw);
+  animation-delay: 8187ms;
+  opacity: 0.65;
 }
 html body main .night .shooting_star:nth-child(12)::before, html body main .night .shooting_star:nth-child(12)::after {
-  animation-delay: 7028ms;
+  animation-delay: 8187ms;
 }
 html body main .night .shooting_star:nth-child(13) {
-  top: calc(100% - 215vh);
-  left: calc(0% + 57vw);
-  animation-delay: 7301ms;
-  opacity: 0.86;
+  top: calc(100% - 179vh);
+  left: calc(0% + 30vw);
+  animation-delay: 6699ms;
+  opacity: 0.54;
 }
 html body main .night .shooting_star:nth-child(13)::before, html body main .night .shooting_star:nth-child(13)::after {
-  animation-delay: 7301ms;
+  animation-delay: 6699ms;
 }
 html body main .night .shooting_star:nth-child(14) {
-  top: calc(100% - 205vh);
-  left: calc(0% + 10vw);
-  animation-delay: 8335ms;
+  top: calc(100% - 79vh);
+  left: calc(0% + 22vw);
+  animation-delay: 1203ms;
   opacity: 0.59;
 }
 html body main .night .shooting_star:nth-child(14)::before, html body main .night .shooting_star:nth-child(14)::after {
-  animation-delay: 8335ms;
+  animation-delay: 1203ms;
 }
 html body main .night .shooting_star:nth-child(15) {
-  top: calc(100% - 54vh);
-  left: calc(0% + 76vw);
-  animation-delay: 10321ms;
-  opacity: 0.58;
+  top: calc(100% - 154vh);
+  left: calc(0% + 30vw);
+  animation-delay: 4572ms;
+  opacity: 0.97;
 }
 html body main .night .shooting_star:nth-child(15)::before, html body main .night .shooting_star:nth-child(15)::after {
-  animation-delay: 10321ms;
+  animation-delay: 4572ms;
 }
 html body main .night .shooting_star:nth-child(16) {
-  top: calc(100% - 226vh);
-  left: calc(0% + 30vw);
-  animation-delay: 9801ms;
-  opacity: 0.77;
+  top: calc(100% - 52vh);
+  left: calc(0% + 70vw);
+  animation-delay: 1494ms;
+  opacity: 0.53;
 }
 html body main .night .shooting_star:nth-child(16)::before, html body main .night .shooting_star:nth-child(16)::after {
-  animation-delay: 9801ms;
+  animation-delay: 1494ms;
 }
 html body main .night .shooting_star:nth-child(17) {
-  top: calc(100% - 208vh);
-  left: calc(0% + 11vw);
-  animation-delay: 8337ms;
-  opacity: 0.98;
+  top: calc(100% - 23vh);
+  left: calc(0% + 17vw);
+  animation-delay: 6689ms;
+  opacity: 0.51;
 }
 html body main .night .shooting_star:nth-child(17)::before, html body main .night .shooting_star:nth-child(17)::after {
-  animation-delay: 8337ms;
+  animation-delay: 6689ms;
 }
 html body main .night .shooting_star:nth-child(18) {
-  top: calc(100% - 114vh);
-  left: calc(0% + 72vw);
-  animation-delay: 4944ms;
-  opacity: 0.85;
+  top: calc(100% - 77vh);
+  left: calc(0% + 17vw);
+  animation-delay: 3174ms;
+  opacity: 0.83;
 }
 html body main .night .shooting_star:nth-child(18)::before, html body main .night .shooting_star:nth-child(18)::after {
-  animation-delay: 4944ms;
+  animation-delay: 3174ms;
 }
 html body main .night .shooting_star:nth-child(19) {
-  top: calc(100% - 61vh);
-  left: calc(0% + 53vw);
-  animation-delay: 3579ms;
-  opacity: 0.68;
+  top: calc(100% - 214vh);
+  left: calc(0% + 47vw);
+  animation-delay: 1341ms;
+  opacity: 0.54;
 }
 html body main .night .shooting_star:nth-child(19)::before, html body main .night .shooting_star:nth-child(19)::after {
-  animation-delay: 3579ms;
+  animation-delay: 1341ms;
 }
 html body main .night .shooting_star:nth-child(20) {
-  top: calc(100% - 98vh);
-  left: calc(0% + 75vw);
-  animation-delay: 8863ms;
-  opacity: 0.59;
+  top: calc(100% - 71vh);
+  left: calc(0% + 29vw);
+  animation-delay: 10261ms;
+  opacity: 0.89;
 }
 html body main .night .shooting_star:nth-child(20)::before, html body main .night .shooting_star:nth-child(20)::after {
-  animation-delay: 8863ms;
+  animation-delay: 10261ms;
 }
 html body main .name {
-  margin-top: 28vh;
+  margin-top: 32vh;
   display: grid;
 }
 html body main .name h1 {
@@ -439,17 +435,17 @@ html body main .bounce {
 }
 html body #kontakt {
   width: 100%;
-  height: 55vh;
+  height: auto;
   font-size: 1.2vw;
   align-items: center;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2vw;
 }
 html body #kontakt .kontakt_box {
   width: 95vw;
-  height: 50vh;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -498,6 +494,7 @@ html body #kontakt .kontakt_box form button {
   color: #cfdbe8;
   font-size: 0.9vw;
   width: 100%;
+  margin-bottom: 3vw;
 }
 html body #kontakt .kontakt_box form button:hover {
   cursor: pointer;
@@ -530,7 +527,6 @@ html body #kontakt .kontakt_box form div textarea:focus, html body #kontakt .kon
 }
 html body #projekty {
   width: 100%;
-  height: 70vh;
   padding-bottom: 3vh;
   display: flex;
   flex-wrap: wrap;
@@ -538,7 +534,6 @@ html body #projekty {
 }
 html body #projekty .projekty_box {
   width: 85vw;
-  height: 70vh;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -572,6 +567,7 @@ html body #projekty p {
   color: #cfdbe8;
   font-size: 2vw;
   font-weight: bold;
+  margin: 1vw;
 }
 html body .game {
   width: 100%;
@@ -673,234 +669,93 @@ html body .weatherContainer input {
   width: 200px;
 }
 
-@media screen and (max-width: 1550px) {
-  body main h1 {
-    word-spacing: 100vw;
-    margin-top: -50px;
+@media screen and (max-width: 1200px) {
+  body header {
+    margin-top: 0 !important;
   }
-  body #projekty {
-    height: 100vh !important;
-    padding-bottom: 50vh !important;
+  body header .menucontainer {
+    width: 100vw !important;
+    border-radius: 0 !important;
+    height: 9vw !important;
+    padding: 0 !important;
   }
-  body #projekty p {
+  body header .menucontainer ul {
+    gap: 10vw !important;
+  }
+  body header .menucontainer ul .sourceCodeMobile {
+    display: flex !important;
+    align-items: center;
+    position: absolute;
+    right: 2vw;
+    margin-top: 0.5vw;
+  }
+  body header .menucontainer ul .sourceCodeMobile a {
+    color: #1D3557;
+    text-decoration: none;
+  }
+  body header .menucontainer ul .sourceCodeMobile a:hover {
+    cursor: pointer;
+  }
+  body header .menucontainer ul .sourceCodeMobile a img {
+    width: 6vw;
+  }
+  body header .menucontainer ul a {
     font-size: 3vw !important;
   }
-}
-@media screen and (max-width: 855px) {
-  body main h1 {
-    font-size: 80px !important;
-    margin-top: -50px;
+  body header .sourceCode {
+    display: none !important;
   }
-  body main h2 {
-    font-size: 40px !important;
-  }
-  body main .languages img {
-    width: 50px !important;
-    margin-left: 15px !important;
-  }
-  body main .languages #imgRounded {
-    border-radius: 4px !important;
-  }
-  body #projekty {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  body #projekty div {
-    width: 40% !important;
-    text-align: center;
-    height: 0 !important;
-  }
-  body #projekty div p {
-    font-size: 3vw !important;
-  }
-}
-@media screen and (max-width: 620px) {
-  body header {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 60px !important;
-    width: 100vw !important;
-    display: flex;
-    justify-content: right;
-  }
-  body header input {
-    display: none;
-  }
-  body header input:not(:checked) ~ .menucontainer {
-    opacity: 1;
-  }
-  body header .menu {
-    display: none;
-  }
-  body header .menucontainer {
-    width: 100vw !important;
-    height: 80px !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    transition: none !important;
-    transform: none !important;
-  }
-  body header .menucontainer ul {
-    display: flex !important;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0 !important;
-    margin: 0 !important;
-    margin-top: 25px !important;
-  }
-  body header .menucontainer ul div {
-    height: 100%;
-  }
-  body header .menucontainer ul div a {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  body main h1 {
-    font-size: 50px !important;
-    margin-top: -50px;
-    letter-spacing: 10px !important;
-  }
-  body main h2 {
-    font-size: 20px !important;
-    margin-left: 42px !important;
-  }
-  body main .languages img {
-    width: 20px !important;
-    margin-left: 8px !important;
-  }
-  body main .languages #imgRounded {
-    border-radius: 2px !important;
-  }
-  body #projekty {
-    height: 80vh !important;
-    padding-bottom: 20vh !important;
-  }
-  body #kontakt {
-    font-size: 20px !important;
-  }
-  body #kontakt form {
-    width: 430px !important;
-  }
-}
-@media screen and (max-width: 450px) {
-  body header {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 60px !important;
-    width: 100vw !important;
-    display: flex;
-    justify-content: right;
-  }
-  body header input {
-    display: none;
-  }
-  body header input:not(:checked) ~ .menucontainer {
-    opacity: 1;
-  }
-  body header .menu {
-    display: none;
-  }
-  body header .menucontainer {
-    width: 100vw !important;
-    height: 70px !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    transition: none !important;
-    transform: none !important;
-  }
-  body header .menucontainer ul {
-    display: flex !important;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0 !important;
-    margin: 0 !important;
-    margin-top: 25px !important;
-  }
-  body header .menucontainer ul div {
-    height: 100%;
-  }
-  body header .menucontainer ul div a {
-    padding: 0 !important;
-    margin: 0 !important;
-    font-size: 15px !important;
-  }
-  body main h1 {
-    font-size: 35px !important;
-    margin-top: -50px;
-    letter-spacing: 10px !important;
-  }
-  body main h2 {
-    font-size: 20px !important;
-    margin-left: 42px !important;
-  }
-  body #projekty {
-    height: 60vh !important;
-    padding-bottom: 20vh !important;
-  }
-  body #kontakt {
-    font-size: 15px !important;
-  }
-  body #kontakt form {
-    width: 300px !important;
-  }
-}
-@media screen and (max-width: 320px) {
-  body header {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 20vh !important;
-    width: 100vw !important;
-    display: flex;
-    justify-content: right;
-  }
-  body header input {
-    display: none;
-  }
-  body header input:not(:checked) ~ .menucontainer {
-    opacity: 1;
-  }
-  body header .menu {
-    display: none;
-  }
-  body header .menucontainer {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100vw !important;
-    height: 20vw !important;
-    border-radius: 0 !important;
-    transition: none !important;
-    transform: none !important;
-  }
-  body header .menucontainer ul {
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex !important;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 7vw !important;
-  }
-  body header .menucontainer ul div {
-    height: 100%;
-  }
-  body header .menucontainer ul div a {
-    padding: 0 !important;
-    margin: 0 !important;
-    font-size: 5vw !important;
-  }
-  body main h1 {
+  body main .name h1 {
     font-size: 10vw !important;
-    letter-spacing: 3vw !important;
-    margin-left: 10vw !important;
   }
-  body main h2 {
+  body main .name h2 {
     font-size: 5vw !important;
-    margin-left: 10vw !important;
   }
-  body #projekty {
-    height: 35vh !important;
-    padding-bottom: 15vh !important;
+  body #kontakt .kontakt_box {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    margin-bottom: 0.5vw !important;
+  }
+  body #kontakt h3 {
+    font-size: 5vw !important;
+  }
+  body #kontakt p {
+    font-size: 3vw !important;
+  }
+  body #kontakt form {
+    width: 90vw !important;
+  }
+  body #kontakt form button {
+    height: 6.3vw !important;
+    margin-bottom: 2.5vw !important;
+  }
+  body #kontakt form div input {
+    height: 4.5vw !important;
+    margin-bottom: 1.5vw !important;
+  }
+  body #kontakt form div textarea {
+    height: 13.5vw !important;
+    margin-bottom: 1.5vw !important;
+  }
+  body #kontakt form button, body #kontakt form input, body #kontakt form textarea {
+    font-size: 2vw !important;
+  }
+  body #projekty .projekty_box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    padding-bottom: 4vw !important;
+  }
+  body #projekty .projekty_box div {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  body #projekty .projekty_box div img {
+    width: 100% !important;
+  }
+  body #projekty .projekty_box div p {
+    font-size: 5vw !important;
+    margin: 2vw 0 !important; /* Adds space above and below text */
   }
 }
 @keyframes topOnload {

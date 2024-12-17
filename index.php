@@ -19,9 +19,6 @@
     </script>
 </head>
 <body>
-
-<p id="rework">strona w trakcie przebudowy!</p> 
-
     <header>
         <div class="menucontainer">
             <ul>
@@ -36,6 +33,9 @@
                 </div>
                 <div>
                     <a href="#kontakt">Kontakt</a>
+                </div>
+                <div class="sourceCodeMobile">
+                    <a href="https://github.com/patrykJankowiak1102/portfolio" target="_blank"><img src="img/github_logo.png" alt="github logo"></a>
                 </div>
             </ul>
         </div>
